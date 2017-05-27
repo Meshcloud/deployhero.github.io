@@ -1,24 +1,24 @@
 <div class="nav-docs">
   <!-- Docs Nav -->
+  <h3>Table of Contents</h3>
   {% for section in site.data.nav %}
-    <div class="nav-docs-section">
-      <h3>{{ section.title }}</h3>
+  <div class="nav-docs-section">
+    <h4>{{ section.title }}</h3>
       <ul>
         {% for item in section.items %}
-          <li>
-            <a href="pages/{{ item.id }}.html">{{ p.title }}</a>
-            {% if item.subitems %}
-              <ul>
-                {% for subitem in item.subitems %}
-                  <li>
-                    <a href="pages/{{ item.id }}.html">{{ p.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
+        <li>
+          <a href="/pages/{{ item.id }}.html">{{ item.title }}</a> {% if item.subitems %}
+          <ul>
+            {% for subitem in item.subitems %}
+            <li>
+              <a href="/pages/{{ item.id }}.html">{{ item.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
         {% endfor %}
       </ul>
-    </div>
+  </div>
   {% endfor %}
 </div>

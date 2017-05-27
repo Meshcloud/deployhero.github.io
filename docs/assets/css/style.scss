@@ -1,0 +1,16 @@
+---
+---
+
+@import  "{{ site.theme }}";
+
+.nav-docs {
+  a, h3, h4 {
+    color: #666;
+  }
+
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 2px;
+  margin-bottom: 20px;  
+}

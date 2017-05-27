@@ -1,3 +1,8 @@
+---
+layout: default
+title: Deploy Hero
+---
+
 # Deploy Hero
 
 This tutorial will show you how to deploy Cloud Applications like a Hero using [Concourse CI](http://concourse.ci/) and [Cloud Foundry](https://www.cloudfoundry.org/get-started/). It is a good example for how a team of developers can leverage Cloud Foundry's powerful automation of common DevOps tasks to implement [Continuous Delivery](https://continuousdelivery.com/).
