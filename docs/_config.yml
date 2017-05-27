@@ -1,1 +1,3 @@
 theme: jekyll-theme-hacker
+title: "Deploy Cloud Applications Like a Hero"
+description: "Deploy Cloud Applications Like a Hero: A sample project to demonstrate continuous delivery with Concourse CI and Cloud Foundry"
