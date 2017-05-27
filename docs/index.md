@@ -9,6 +9,6 @@ This tutorial will show you how to:
 
 You can easily deploy all cloud resources required for this tutorial in a trial account for [Meshcloud](https://www.meshcloud.io).
 
-{% include navigation.html context="/pages/" %}
+{% include navigation.html %}
 
 
