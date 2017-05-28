@@ -23,7 +23,7 @@ cf create-service PostgreSQL S todo-db
 
 ## Pushing the Application
 
-If you take a look at the sample application we just cloned, you'll notice that it has a manifest.yml that describes the application to Cloud Foundry:
+If you take a look at the sample application we just cloned, you'll notice that it has a `manifest.yml` file that describes the application to Cloud Foundry:
 
 
 ```yml
