@@ -8,4 +8,4 @@ In this chapter, we will deploy Concourse itself using Docker containers.
 
 Concourse itself is made up of a couple of components and can scale out horizontally if required. For now however, the simplest way to get started with it is to deploy it all on a single VM running docker using [docker-compose](https://docs.docker.com/compose/).
 
-> **Warning** The setup presented in this tutorial is not ready for production. 
+> **Warning** The setup presented here is meant to get you stated quickly, it is not ready for production. See [Setting Concourse up for Production](/setting-concourse-up-for-production.md) for more instructions. 
