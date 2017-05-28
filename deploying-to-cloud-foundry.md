@@ -52,7 +52,6 @@ On your console you should see how Cloud Foundry prepares the Application for ex
 
 
 ```
-
 Using manifest file /Users/jr/dev/tmp/todo-backend-express/manifest.yml
 
 Updating app todo-backend in org demo / space meetup as demo@meshcloud.io...
@@ -70,7 +69,7 @@ Stopping app todo-backend in org demo / space meetup as demo@meshcloud.io...
 OK
 
 Starting app todo-backend in org demo / space meetup as demo@meshcloud.io...
-
+OK
 ```
 
 And if everything wen't well, you should finally see: 
