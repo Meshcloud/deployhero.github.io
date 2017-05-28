@@ -25,5 +25,4 @@ So our deployment pipeline looks roughly like this:
   6. Ready to server requests!
 
 
-In the next step, we will learn how we can leverage Cloud Foundry's powerful DevOps automation to to take care of steps 3-6 for us. After that, we will look at automating the full
-[Delivery Pipeline](delivery-pipeline.md).
+In the next step, we will learn how we can leverage Cloud Foundry's powerful DevOps automation to to take care of steps 3-6 for us. After that, we will look at automating the full [Delivery Pipeline](delivery-pipeline.md).
