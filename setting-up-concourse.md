@@ -27,6 +27,9 @@ Then it's just a matter of firing up docker-compose to span Concourse's web UI, 
 
 ```bash
 $ docker-compose up
+Starting localconcourse_concourse-db_1
+Starting localconcourse_concourse-web_1
+Starting localconcourse_concourse-worker_1
 ```
 
 Once all services have started (which may take a while on your first run), you should be able to visit Concourse in your browser: 
