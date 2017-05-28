@@ -13,8 +13,7 @@ The official documentation does a good job explaining these [concepts in detail]
 Concourse describes its pipelines in a simple YAML format. We start by defining the git repository with the sample application as a Resource: 
 
 
-
-```YAML
+```YML
 resources: 
 - name: bitbucket-master
   type: git
