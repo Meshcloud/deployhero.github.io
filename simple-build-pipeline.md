@@ -10,7 +10,7 @@ The official documentation does a good job explaining these [concepts in detail]
 
 ## The Pipeline
 
-Concourse describes its pipelines in a simple YAML format. We start by defining the git repository with the sample application as a Resource: 
+Concourse describes its pipelines in a simple YAML format. We start by defining the git repository with the sample application as a Resource. There's also a resource for Cloud Foundry, which supports `cf pushing` build artifacts to a predefined Cloud Foundry target.
 
 
 ```YML
@@ -20,6 +20,16 @@ resources:
   source:
     uri: https://johannesrudolph@bitbucket.org/meshcloud/todo-backend-express.git
     branch: master
-
+- name: cf-prod
+  type: cf
+  source:
+    api: https://api.cf.eu-de-netde.msh.host
+    username: {{cf-user}}
+    password: {{cf-password}}
+    organization: meshstack
+    space: production
 ```
+
+> **Hint** `fly` allows us to replace placeholders for secrets like `{{cf-password}}` while uploading a pipeline with values from a secrets file. This enables you to store sensitive secrets outside of version control. 
+
 
