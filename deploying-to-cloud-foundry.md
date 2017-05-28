@@ -94,3 +94,11 @@ buildpack: https://github.com/cloudfoundry/nodejs-buildpack
 iDevBook01:todo-backend-express jr (master) $ 
 ```
 
+## Testing the Application
+
+By now, Cloud Foundry should have worked its magic to deploy the Application on the Cloud and make it available under the URL found in the final step of the output: `urls: todo-backend.cf.onstack.de`. 
+
+You can enter the URL of your service at the official [Todobackend tester](http://www.todobackend.com/specs/index.html)
+ to verify that everything's working as expected. 
+
+![](/assets/todospecs.png)
