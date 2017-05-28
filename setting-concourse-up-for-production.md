@@ -1,5 +1,9 @@
 > **Info** This article is a work in progress
 
+# Setting up Concourse for Production
+
+This section looks at the "next step up" from the local Concourse deployment used earlier in this tutorial, by deploying Concourse on a dedicated VM that you can scale vertically. However, if you need to run hundreds of builds per hour or need Concourse itself to be highly available, you should instead take a look at strategies for Deploying Concourse as a Cluster, e.g. [Concourse on Kubernetes](https://github.com/kubernetes/charts/tree/master/stable/concourse) or [Concourse on BOSH](https://concourse.ci/clusters-with-bosh.html).
+
 
 ## Provisioning a VM for Concourse 
 > **Hint** First time deploying an OpenStack VM? Follow our OpenStack Starter Guide (coming soon) to setup ssh keys, networking, routers and public IPs correctly.
@@ -48,3 +52,8 @@ tbd
 ## Adding HTTPS using Let's Encrypt
 
 tbd
+
+## Using a non-main Team
+
+tbd (use dev team for dev tasks, link to advanced auth mechanisms)
+

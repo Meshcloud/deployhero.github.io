@@ -12,5 +12,6 @@
   * [Build Status and Pull Requests](build-status-and-pull-requests.md)
   * [Managing Staging Environments](managing-staging-environments.md)
   * [Setting Concourse up for Production](setting-concourse-up-for-production.md)
+  * [Using an Artifacts Store](using-an-artifacts-store.md)
 * [Links and Resources](links-and-resources.md)
 
