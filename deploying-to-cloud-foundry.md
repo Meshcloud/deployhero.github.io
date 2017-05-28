@@ -26,8 +26,7 @@ cf create-service PostgreSQL S todo-db
 If you take a look at the sample application we just cloned, you'll notice that it has a manifest.yml that describes the application to Cloud Foundry:
 
 
-```
-$ cat manifest.yml 
+```yml
 ---
 applications:
   - name: todo-backend
