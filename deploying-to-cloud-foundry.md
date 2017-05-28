@@ -102,3 +102,5 @@ You can enter the URL of your service at the official [Todobackend tester](http:
  to verify that everything's working as expected. 
 
 ![](/assets/todospecs.png)
+
+If you think "that's cool", things are going to become even better in the next section when we will learn to automate our builds and deployments like a hero. 
