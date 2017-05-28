@@ -11,7 +11,7 @@
   * [Blue-Green Deployments](blue-green-deployments.md)
   * [Build Status and Pull Requests](build-status-and-pull-requests.md)
   * [Managing Staging Environments](managing-staging-environments.md)
-  * [Setting Concourse up for Production](setting-concourse-up-for-production.md)
   * [Using an Artifacts Store](using-an-artifacts-store.md)
+  * [Setting Concourse up for Production](setting-concourse-up-for-production.md)
 * [Links and Resources](links-and-resources.md)
 
