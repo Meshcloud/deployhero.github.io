@@ -1,10 +1,16 @@
 {
-    "gitbook": "2.0.1",
-    "plugins": ["edit-link"],
+    "gitbook": ">=3.1.1",
+    "plugins": [
+        "heading-anchors", 
+        "richquotes@0.0.7", 
+        "github"
+    ],
     "pluginsConfig": {
-            "edit-link": {
-                "base": "https://github.com/Meshcloud/deployhero.github.io/edit/master",
-                "label": "Edit This Page"
-            }
+        "richquotes" : {
+            "default" : false
+        },
+        "github": {
+            "url": "https://github.com/Meshcloud/deployhero.github.io"
+        }
     }
 }
