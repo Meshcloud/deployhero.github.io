@@ -30,7 +30,7 @@ resources:
     space: production
 ```
 
-> **Hint** `fly` allows us to replace placeholders for secrets like `{{cf-password}}` while uploading a pipeline with values from a secrets file. This enables you to store sensitive secrets outside of version control. 
+> **Hint** `fly` allows us to replace placeholders for secrets like `cf-password}}` while uploading a pipeline with values from a secrets file. This enables you to store sensitive secrets outside of version control. 
 
 Next, we will define the build job. Typically build jobs contain very few instructions about the tasks themselves and instead leave the details to `task.yml` files stored in source control. This allows you to quickly update build tasks without needing to touch your pipeline. 
 
