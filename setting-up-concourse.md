@@ -13,7 +13,7 @@ Concourse itself is made up of a couple of components and can scale out horizont
 To get started, check out the repository of this tutorial and navigate to the snippets directory:
 
 ```bash
-$ git clone git@bitbucket.org:meshcloud/deployhero.git
+$ git clone https://github.com/Meshcloud/deployhero.github.io
 $ cd snippets/local-concourse/
 ```
 
