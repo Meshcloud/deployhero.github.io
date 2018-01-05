@@ -1,5 +1,3 @@
-> **Info** This article is a work in progress
-
 # Adding a Docker Registry
 
 Concourse is built on two principles: every build runs in a container and every in-or output of a build job is a Resource \(and [resources are containers too](https://concourse.ci/implementing-resources.html)\).  So once you got up to speed up on Concourse, it's inevitable that you want to add your own container images.
@@ -8,7 +6,7 @@ Depending on what goes into these images, you may not want to host them on the p
 
 ## Preparing the Docker Host
 
-To host our registry, prepare a virtual machine `docker-registry` with a volume called `docker-data`. You can follow [these instructions](/setting-concourse-up-for-production.md) to create the machine. 
+To host our registry, prepare a virtual machine `docker-registry` with a volume called `docker-data`. You can follow [these instructions](/setting-concourse-up-for-production.md) to create the machine.
 
 Once you have the VM set up using docker-machine, we can now ssh into the host using `docker-machine ssh docker-registy`and prepare a `htpasswd` file with to secure access to the registry using http basic auth. Run these commands _on the docker-registry_ machine and replace `testuser`and `testpassword` with your desired credentials:
 
@@ -17,7 +15,7 @@ sudo mkdir -p /docker-data/auth
 sudo sh -c "docker run --entrypoint htpasswd registry:2 -Bbn testuser testpassword > /docker-data/auth/htpasswd"
 ```
 
-Docker registries also need to present a valid SSL certificate, so we will use the [docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) to retrieve a valid SSL certificate for us. The proxy-companion also needs a nginx config template file. Fetch it _on the docker-registry _machine:_ _
+Docker registries also need to present a valid SSL certificate, so we will use the [docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) to retrieve a valid SSL certificate for us. The proxy-companion also needs a nginx config template file. Fetch it _on the docker-registry \_machine:_ \_
 
 ```bash
 sudo mkdir -p /docker-data/nginx/templates
@@ -28,7 +26,7 @@ sudo sh -c "curl https://raw.githubusercontent.com/jwilder/nginx-proxy/master/ng
 
 > **Hint **starting the registry the first time may take a few minutes whlie the letsencrypt-proxy-companion creates a Diffie-Hellman group.
 
-We will start the registry using this`docker-compose.yml`file. Make sure to replace the  URL of the registry `docker.example.com ` and email with your own domain.
+We will start the registry using this`docker-compose.yml`file. Make sure to replace the  URL of the registry `docker.example.com` and email with your own domain.
 
 ```yml
 version: '2'
