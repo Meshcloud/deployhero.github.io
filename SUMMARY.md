@@ -13,5 +13,6 @@
   * [Managing Staging Environments](managing-staging-environments.md)
   * [Using an Artifacts Store](using-an-artifacts-store.md)
   * [Setting Concourse up for Production](setting-concourse-up-for-production.md)
+  * [Adding a Docker Registry](adding-a-docker-registry.md)
 * [Links and Resources](links-and-resources.md)
 
