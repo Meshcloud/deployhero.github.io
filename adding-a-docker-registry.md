@@ -15,7 +15,7 @@ sudo mkdir -p /docker-data/auth
 sudo sh -c "docker run --entrypoint htpasswd registry:2 -Bbn testuser testpassword > /docker-data/auth/htpasswd"
 ```
 
-Docker registries also need to present a valid SSL certificate, so we will use the [docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) to retrieve a valid SSL certificate for us. The proxy-companion also needs a nginx config template file. Fetch it _on the docker-registry \_machine:_ \_
+Docker registries also need to present a valid SSL certificate, so we will use the [docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) to retrieve a valid SSL certificate for us. The proxy-companion also needs a nginx config template file. Fetch it _on the docker-registry-machine:_
 
 ```bash
 sudo mkdir -p /docker-data/nginx/templates
@@ -89,6 +89,13 @@ services:
       - /docker-data/certs:/certs
       - /docker-data/auth:/auth
     restart: always
+```
+
+Now let's start the compose file on the `docker-registry` machine _from our own host_ : 
+
+```bash
+docker-machine env docker-registry
+docker-compose up
 ```
 
 
