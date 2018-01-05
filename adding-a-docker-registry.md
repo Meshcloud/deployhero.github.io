@@ -91,12 +91,12 @@ services:
     restart: always
 ```
 
-Now let's start the compose file on the `docker-registry` machine _from our own host_ : 
+Now let's start the compose file on the `docker-registry` machine _from our own host_ :
 
 ```bash
 docker-machine env docker-registry
 docker-compose up
 ```
 
-
+When you hit the registry at its URL \`https://docker.example.com/v2\` from your browser you should see a HTTP basic auth prompt. If everything went well, you can log in using your supplied credentials.
 
