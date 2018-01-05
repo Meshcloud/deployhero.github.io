@@ -30,7 +30,10 @@ After creating this VM, attach a floating IP to it so that you can connect to it
 Now let's verify that we can connect to this VM using SSH \(replace the IP in the command below with the floating IP of your VM\):
 
 ```bash
-$ ssh ubuntu@217.26.224.229 The authenticity of host '217.26.224.229 (217.26.224.229)' can't be established. ECDSA key fingerprint is SHA256:iKZW3x9SJ0GlQAnxMCjBv8vM5qNq3hde5c8k63flgOs. Are you sure you want to continue connecting (yes/no)? yes
+$ ssh ubuntu@217.26.224.229 
+The authenticity of host '217.26.224.229 (217.26.224.229)' can't be established. 
+ECDSA key fingerprint is SHA256:iKZW3x9SJ0GlQAnxMCjBv8vM5qNq3hde5c8k63flgOs. 
+Are you sure you want to continue connecting (yes/no)? yes
 
 ubuntu@concourse:~$
 ```
@@ -48,7 +51,7 @@ $ docker-machine create --driver generic \
 concourse
 ```
 
-You should now be able to verify docker is up and running: 
+You should now be able to verify docker is up and running:
 
 ```bash
 eval $(docker-machine env concourse)
@@ -74,7 +77,13 @@ Server:
 
 ## Attaching a Volume for Storage
 
-tbd
+It's a good idea to keep concourse's database and secrets on a separate volume. This enables us to easily create backups as well as resizing the virtual machine later.
+
+Create a Volume with a size of 100 GiB and attach it to your virtual machine. When you ssh into your machine, you will see it as a block device at `dev/vdb`. Now let's:
+
+* format this volume: `sudo mkfs.ext4 /dev/vdb`
+* add this line to `/etc/fstab`: `/dev/vdb /concourse-data  ext4 defaults 0 1`
+  mount it: `mount -a`
 
 ## Adding HTTPS using Let's Encrypt
 
@@ -82,5 +91,5 @@ tbd
 
 ## Using a non-main Team
 
-tbd \(use dev team for dev tasks, link to advanced auth mechanisms\) like 
+tbd \(use dev team for dev tasks, link to advanced auth mechanisms\) like
 
